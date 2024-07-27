@@ -1,0 +1,38 @@
+/* styles.module.css */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* 항목들이 줄 바꿈되도록 설정 */
+  gap: 20px; /* 항목 사이의 간격 */
+  padding: 20px; /* 컨테이너 안쪽 여백 */
+  justify-content: center; /* 컨테이너 중앙 정렬 */
+  max-width: 1200px; /* 최대 너비 설정 (원하는 값으로 조정 가능) */
+  margin: 0 auto; /* 페이지 중앙에 정렬 */
+}
+
+.item {
+  display: flex;
+  align-items: center; /* 사진과 텍스트 수직 정렬 */
+  width: calc(33.333% - 20px); /* 한 줄에 3개 항목 표시, 간격 고려 */
+  box-sizing: border-box; /* 패딩과 보더를 너비에 포함 */
+}
+
+.item img {
+  width: 100px; /* 사진의 너비 */
+  height: 100px; /* 사진의 높이 */
+  object-fit: cover; /* 사진 비율 유지 */
+  border-radius: 50%; /* 사진을 원형으로 만들기 */
+  margin-right: 20px; /* 사진과 텍스트 사이의 간격 */
+}
+
+.item p {
+  margin: 0; /* 기본 여백 제거 */
+  font-size: 16px; /* 폰트 크기 */
+}
+
+.item .name {
+  font-weight: bold; /* 이름을 굵게 표시 */
+}
+
+.item .role {
+  color: #555; /* 배역 이름 색상 */
+}

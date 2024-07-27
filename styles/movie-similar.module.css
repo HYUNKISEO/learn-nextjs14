@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* 카드 간격 */
+  justify-content: flex-start; /* 카드들을 왼쪽으로 정렬 */
+  padding: 10px;
+  max-width: 1200px; /* 컨테이너의 최대 너비 */
+  margin: 0 auto; /* 컨테이너를 중앙 정렬 */
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.movie {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 140px; /* 카드 너비 */
+  text-align: center;
+  background-color: rgb(0, 0, 0); /* 배경색 */
+}
+
+.movie:hover {
+  transform: scale(1.20); /* 호버 시 카드 확대 */
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+}
+
+.movie p {
+  margin: 8px 0;
+  padding: 0 8px;
+  color: #ffffff;
+}
+
+.movie p.title {
+  font-weight: bold;
+}
+
+.movie p.vote {
+  color: #f39c12; /* 평가 점수 강조 색상 */
+}

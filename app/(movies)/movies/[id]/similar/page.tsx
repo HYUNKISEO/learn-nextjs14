@@ -1,10 +1,7 @@
 import { Suspense } from "react";
-import MovieInfo, { getMovie } from "../../../../components/movie-info";
-import MovieVideos from "../../../../components/movie-videos";
-
-export interface IParams {
-  params: { id: string };
-}
+import { IParams } from "../page";
+import MovieInfo, { getMovie } from "../../../../../components/movie-info";
+import MovieSimilar from "../../../../../components/movie-similar";
 
 export async function generateMetadata({ params: { id } }: IParams) {
   const movie = await getMovie(id)
@@ -19,8 +16,8 @@ export default async function MovieDetail({ params: { id } }: IParams) {
       <Suspense fallback={<h1>Loading movie info</h1>}>
         <MovieInfo id={id} />
       </Suspense>
-      <Suspense fallback={<h1>Loading movie videos</h1>}>
-        <MovieVideos id={id} />
+      <Suspense fallback={<h1>Loading movie similar</h1>}>
+        <MovieSimilar id={id} />
       </Suspense>
     </div>
   );
